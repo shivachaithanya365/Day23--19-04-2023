@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gridlayout</title>
+    <style>
+        #parent {
+            background-color: rgb(68, 123, 210);
+            width: 1040px;
+            height: 490px;
+            margin: 100px 200px 100px 200px;
+            display: grid;
+            grid-template-columns: 327px 327px 327px;
+            grid-template-rows: 160px 160px 160px;
+            justify-content: space-evenly;
+        }
+
+        /* #parent div img{
+        width: 330px; height: 240px;
+        position: absolute;
+       }
+       div img{
+         position: relative;
+       }
+       p{
+        background-color: black;
+        color: white;
+        padding: 8px;
+       } */
+        #parent div {
+            background-color: rgb(142, 223, 255);
+            margin-top: 12px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 22px;
+            ;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS grid layout</h1>
+    <div id="parent">
+        <div style="grid-column: 1/4;">
+            <p style="margin: 60px;">Header</p>
+        </div>
+        <!-- <div>
+           2
+        </div>
+        <div>
+            3
+        </div> -->
+        <div style="grid-row: 2/4;">
+            <p style="margin: 60px;">Menu</p>
+        </div>
+        <div>
+            <p style="margin: 60px;">Main</p>
+        </div>
+        <div>
+            <p style="margin: 60px;">Right</p>
+        </div>
+        <!-- <div >
+            7
+        </div> -->
+        <div style="grid-column: 2/4;">
+            <p style="margin: 60px;">Footer</p>
+        </div>
+        <!-- <div>
+            9
+        </div> -->
+    </div>
+</body>
+
+</html>

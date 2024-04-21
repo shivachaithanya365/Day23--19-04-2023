@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Template</title>
+    <style>
+        div.boss {
+            background-color: rgb(244, 240, 236);
+            width: 1900px; height: 100%;
+        }
+
+        div.left {
+            background-color: white;
+            width: 270px;
+            height: 700px;
+            margin-left: 10px;
+            margin-top: 0px;
+            position: relative;
+            position: fixed;
+
+        }
+
+        P.top {
+            text-align: center;
+            color: gray;
+            background-color: rgb(253, 253, 253);
+            position: absolute;
+            top: 65px;
+            left: 65px;
+            /* margin: 100px; */
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        p {
+            color: gray;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            position: relative;
+            top: 200px;
+            /* margin: 100px; */
+            font-size: 15px;
+            line-height: 30px;
+        }
+
+        p.hover:hover {
+            color: black;
+            background-color: rgb(181, 170, 170);
+        }
+
+        div.right {
+            /* background-color: rgb(201, 147, 77); */
+            width: 1190px;
+            height: 1400px;
+            margin-left: 280px;
+            display: grid;
+            grid-template-columns: 396px 396px 396px;
+            grid-template-rows: 466px 466px 466px;
+
+            /* gap: 5px; */
+        }
+
+        /* div.right div {
+            background-color: rgb(244, 244, 8);
+        } */
+
+        div img {
+            width: 396px;
+            height: 466px;
+
+        }
+
+        .img1 img {
+            opacity: 0.7;
+        }
+
+        .img1 img:hover {
+            opacity: 1;
+        }
+
+        .img2 img {
+            opacity: 0.7;
+        }
+
+        .img2 img:hover {
+            opacity: 1;
+        }
+
+        .img3 img {
+            opacity: 0.7;
+        }
+
+        .img3 img:hover {
+            opacity: 1;
+        }
+
+        .img4 img {
+            opacity: 0.7;
+        }
+
+        .img4 img:hover {
+            opacity: 1;
+        }
+
+        .img5 img {
+            opacity: 0.7;
+        }
+
+        .img5 img:hover {
+            opacity: 1;
+        }
+
+        .img6 img {
+            opacity: 0.7;
+        }
+
+        .img6 img:hover {
+            opacity: 1;
+        }
+
+        .img7 img {
+            opacity: 0.7;
+        }
+
+        .img7 img:hover {
+            opacity: 1;
+        }
+
+        .img8 img {
+            opacity: 0.7;
+        }
+
+        .img8 img:hover {
+            opacity: 1;
+        }
+
+        .img9 img {
+            opacity: 0.7;
+        }
+
+        .img9 img:hover {
+            opacity: 1;
+        }
+
+
+        ul.num {
+            background-color: rgb(244, 240, 236);
+            list-style: none;
+            width: 1150px;
+            margin-left: 280px;
+        }
+
+        ul.num li {
+            background-color: rgb(244, 240, 236);
+            display: inline-block;
+            padding: 10px;
+            position: relative;
+            left: 445px;
+            /* top: 10px; bottom: 10px; */
+        }
+
+        ul.num li:hover {
+            color: white;
+            background-color: black;
+        }
+
+        div.bottom {
+            background-color: rgb(87, 86, 84);
+            width: 1190px;
+            height: 1955px;
+            margin-left: 280px;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        div.bottom p {
+            color: white;
+            background-color: rgb(87, 86, 84);
+            position: absolute;
+            font-size: 20px;
+        }
+
+        div.bottom img {
+            position: absolute;
+            width: 500px;
+            height: 350px;
+            left: 320px;
+            top: 110px;
+        }
+
+        div.bottom p.resume {
+            position: absolute;
+            font-size: 15px;
+            top: 1200px;
+            left: 320px;
+            color: black;
+            z-index: 3;
+            background-color: white;
+            padding: 6px;
+        }
+
+        div.bottom p.resume:hover {
+            color: black;
+            background-color: rgb(218, 211, 211);
+        }
+
+        div.basic {
+            background-color: rgb(227, 223, 223);
+            width: 247px;
+            height: 230px;
+            position: relative;
+            left: 320px;
+            top: 120px;
+
+        }
+
+        div.pro {
+            background-color: rgb(227, 223, 223);
+            width: 247px;
+            height: 230px;
+            position: relative;
+            left: 578px;
+            top: -126px;
+        }
+
+        #basic ul {
+            color: aqua;
+            background-color: rgb(75, 119, 86);
+            position: relative;
+
+        }
+
+        #basic li {
+            color: black;
+            list-style-type: none;
+            text-align: center;
+            margin-left: -40px;
+            line-height: 42px;
+
+        }
+
+        /* #basic li:hover {
+            color: white;
+            background-color: rgb(165, 27, 27);
+        } */
+
+        #pro ul {
+            color: aqua;
+            background-color: rgb(75, 119, 86);
+            position: relative;
+
+        }
+
+        #pro li {
+            color: black;
+            list-style-type: none;
+            text-align: center;
+            margin-left: -40px;
+            line-height: 42px;
+
+        }
+
+        /* #pro li:hover {
+            color: white;
+            background-color: rgb(165, 27, 27);
+        } */
+
+        p.dollar:before {
+            content: ' \0024';
+        }
+
+        div.contact {
+            background-color: rgb(244, 240, 236);
+            width: 1210px;
+            height: 530px;
+            position: relative;
+            left: 280px;
+        }
+
+        p.form {
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(244, 240, 236);
+            position: absolute;
+            left: 350px;
+        }
+
+        input {
+            position: relative;
+            left: 350px;
+            padding: 9px;
+            padding-right: 350px;
+        }
+        
+        div.contact p.message {
+            color: white;
+            background-color: black;
+        }
+        div.contact p.message:hover {
+            color: black;
+            background-color: gray;
+        }
+
+
+        footer {
+
+            background-color: rgb(110, 109, 109);
+            width: 1190px;
+            height: 300px;
+            position: relative;
+            left: 280px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        div.f1 {
+            /* background-color: rgb(53, 83, 83); */
+            position: absolute;
+            top: 20px;
+            align-items: start;
+        }
+
+        div.f2 {
+            /* background-color: aqua; */
+            position: absolute;
+            top: 20px;
+            left: 380px;
+            width: 375px;
+        }
+
+        div.f3 {
+            /* background-color: rgb(100, 131, 131); */
+            position: absolute;
+            top: 20px;
+            left: 770px;
+            width: 410px;
+            height: 200px;
+        }
+
+        div.f2 img {
+            padding: 10px;
+            position: relative;
+        }
+
+        p.lorem1 {
+            display: inline-block;
+            position: absolute;
+        }
+
+        p.lorem2 {
+            display: inline-block;
+            position: absolute;
+
+        }
+
+        div.f3 p {
+            color: white;
+            background-color: gray;
+            display: inline;
+            padding: 2.5px;
+            line-height: 30px;
+            position: relative;
+            left: 0px;
+            top: -10px;
+        }
+
+        img.foot {
+            width: 50px;
+            height: 50px;
+            margin-left: 30px;
+        }
+
+        p.bot {
+            color: white;
+            background-color: black;
+            padding-top: 20px;
+            width: 1190px;
+            height: 50px;
+            margin-left: 280px;
+            margin-top: -200px;
+        }
+
+        div.basic1 {
+            opacity: 0.7;
+        }
+
+        div.basic1:hover {
+            opacity: 1;
+        }
+
+        div.pro1 {
+            opacity: 0.7;
+        }
+
+        div.pro1:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boss">
+        <div class="left">
+            <p class="top">SHIVA <br>CHAITHANYA</p>
+            <p class="hover">PORTFOLIO</p>
+            <p class="hover">ABOUT ME</p>
+            <p class="hover">CONTACT</p>
+        </div>
+
+        <div class="right">
+            <div class="img1">
+                <img src="./natureboy.jpg" alt="img">
+            </div>
+            <div class="img2">
+                <img src="./boy.jpg" alt="img">
+            </div>
+            <div class="img3">
+                <img src="./girl.jpg" alt="img">
+            </div>
+            <div class="img4">
+                <img src="./girl_mountain.jpg" alt="img">
+            </div>
+            <div class="img5">
+                <img src="./man_bench.jpg" alt="img">
+            </div>
+            <div class="img6">
+                <img src="./girl_train.jpg" alt="img">
+            </div>
+            <div class="img7">
+                <img src="./girl.jpg" alt="img">
+            </div>
+            <div class="img8">
+                <img src="./natureboy.jpg" alt="img">
+            </div>
+            <div class="img9">
+                <img src="./closegirl.jpg" alt="img">
+            </div>
+        </div>
+
+        <ul class="num">
+            <li>&lt;&lt;</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>&gt;&gt;</li>
+        </ul>
+
+        <div class="bottom">
+            <p style="top: 30px; left: 550px; ">About me</p><br>
+            <img src="./avatar_hat.jpg" alt="img">
+            <p style="left: 320px; top: 455px;">My Name</p>
+            <p style="font-size: 15px; width: 500px; left: 320px; top: 500px; text-align: left; line-height: 20px;">
+                Some
+                text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do
+                eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in
+                culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. <br><br>
+
+                mail: example@example.com <br><br>
+
+                tel: 5353 35531
+            </p><br><br>
+            <hr style="width: 500px;margin-left: 320px; margin-top: 750px; z-index: 1;">
+            <p style="top: 820px; left: 320px; ">Technical Skills</p><br><br>
+            <p style=" top: 880px; left: 320px; ">Photography</p><br>
+            <div
+                style="background-color: rgb(255, 255, 255); width: 500px; height: 25px; margin-left: 320px; margin-top: 90px;">
+                <div style="background-color: rgb(124, 131, 131);width: 470px; height: 25px; position: relative;">
+                    <p
+                        style="color: black; background-color: rgb(124, 131, 131); position: absolute; top: -20px; left: 220px; height: 25px;">
+                        95%
+                    </p>
+                </div>
+            </div>
+            <p style=" top: 990px; left: 320px; ">Web Design</p><br>
+            <div
+                style="background-color: rgb(255, 255, 255); width: 500px; height: 25px; margin-left: 320px; margin-top: 60px;">
+                <div style="background-color: rgb(124, 131, 131);width: 410px; height: 25px; position: relative;">
+                    <p
+                        style="color: black; background-color: rgb(124, 131, 131); position: absolute; top: -20px; left: 200px; height: 25px;">
+                        85%
+                    </p>
+                </div>
+            </div>
+            <p style=" top: 1090px; left: 320px; ">Photoshop</p><br>
+            <div
+                style="background-color: rgb(255, 255, 255); width: 500px; height: 25px; margin-left: 320px; margin-top: 50px;">
+                <div style="background-color: rgb(124, 131, 131);width: 365px; height: 25px; position: relative;">
+                    <p
+                        style="color: black; background-color: rgb(124, 131, 131); position: absolute; top: -20px; left: 180px; height: 25px;">
+                        80%
+                    </p>
+                </div>
+            </div>
+            <p class="resume">
+                Download Resume
+            </p><br><br>
+            <hr style="width: 500px;margin-left: 320px; margin-top: 80px;"><br><br>
+            <p style=" top: 1320px; left: 320px;">How much i charge? </p><br>
+            <div class="basic1">
+                <p
+                    style="background-color: black; top: 1390px; left: 320px;  width: 247px; height: 60px; padding-top: 30px;">
+                    Basic</p>
+
+                <div class="basic">
+                    <ul id="basic">
+                        <li>Web Design</li>
+                        <hr style="width:240px; margin-left: -37px;">
+                        <li>Photography</li>
+                        <hr style="width:240px; margin-left: -37px;">
+                        <li>5GB Storage</li>
+                        <hr style="width:240px; margin-left: -37px;">
+                        <li>Mail Support</li>
+                        <hr style="width:240px; margin-left: -37px;">
+                    </ul>
+                    <p class="dollar" style=" color: black; background-color: rgb(227, 223, 223);
+             top: 210px;  width: 247px; height: 60px; padding: 15px 0px;">10 <br>per month</p>
+                    <!-- <hr style="width:240px; margin-top: 89px; position: relative;"> -->
+                    <p style=" color: black;background-color: rgb(214, 205, 205);
+             top: 300px;  width: 247px; height: 60px; padding-top: 27px;">Sign Up</p>
+                </div>
+            </div>
+            <div class="pro1">
+                <p
+                    style="background-color: black; top: 1390px; left: 578px;  width: 247px; height: 60px; padding-top: 30px;">
+                    Pro</p>
+
+                <div class="pro">
+                    <ul id="pro">
+                        <li>Web Design</li>
+                        <hr style="width:240px; margin-left: -37px;">
+                        <li>Photography</li>
+                        <hr style="width:240px; margin-left: -37px;">
+                        <li>5GB Storage</li>
+                        <hr style="width:240px; margin-left: -37px;">
+                        <li>Mail Support</li>
+                        <hr style="width:240px; margin-left: -37px;">
+                    </ul>
+                    <p class="dollar" style=" color: black; background-color: rgb(227, 223, 223);
+             top: 210px;  width: 247px; height: 60px; padding: 15px 0px;">25 <br>per month</p>
+                    <!-- <hr style="width:240px; margin-top: 89px; position: relative;">  -->
+                    <p
+                        style=" color: black; background-color: rgb(214, 205, 205); top: 300px;  width: 247px; height: 60px; padding-top: 27px">
+                        Sign Up</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <p
+                style="top: 10px; position: absolute; left: 550px; padding: 5px; font-size: 20px; background-color: rgb(244, 240, 236);">
+                <b>Contact me</b>
+            </p>
+            <p class="form" style="top: 80px; ">Do you want me to photograph you? Fill out the form and fill me in with
+                the details :) I <br>love meeting new people!</p>
+
+            <p class="form" style="top: 160px; position: absolute; left: 350px; ">Name</p>
+            <input type="text" style="top: 210px;">
+
+            <p class="form" style="top: 250px; position: absolute; left: 350px; ">Email</p>
+            <input type="text" style="top: 300px; left: -175px;">
+
+            <p class="form" style="top: 340px; position: absolute; left: 353px; ">Message</p>
+            <input type="text" style="top: 354px; left: 354px;">
+
+            <p class="message"
+                style=" margin-top: 180px; margin-left: 352px; width: 527px; padding: 3px; ">
+                Send Message</p>
+        </div>
+        <footer class="footer">
+            <div class="f1">
+                <h2 style="margin-left: 40px;">INFO</h2>
+                <p style="margin-left: 40px; margin-top: -200px;background-color: rgb(110, 109, 109); color: black; text-align: left;">
+                    Praesent tincidunt sed tellus ut rutrum. Sed vitae justo <br>condimentum, porta lectus vitae,
+                    ultricies congue
+                    <br> gravida diam non fringilla.
+                </p>
+            </div>
+            <div class="f2">
+                <h2 style="margin-left: 30px;">BLOG POSTS</h2>
+                <img class="foot" src="workshop1.jpg" alt="Workshop 1" width="50px" height="50px">
+                <p class="lorem2"
+                    style="margin-left: 10px; margin-top: -30px;background-color: rgb(110, 109, 109);color: black;">
+                    Ipsum</p><br>
+
+                <p class="lorem1" style="top: 85px; left: 110px;background-color: rgb(110, 109, 109);color: black;">Sed
+                    mattis nunc</p>
+                <hr style="width: 330px; margin-left: 40px;">
+                <img class="foot" src="workshop2.jpg" alt="Workshop 2" width="50px" height="50px">
+                <p style="margin-top: -120px; margin-left: 10px;background-color: rgb(110, 109, 109);color: black;"
+                    class="lorem1">Lorem</p><br>
+
+                <p class="lorem2" style="top: 182px; left: 110px;background-color: rgb(110, 109, 109);color: black;">
+                    Praes tinci sed</p>
+            </div>
+            <div class="f3">
+                <h2>POPULAR TAGS</h2>
+                <p style="background-color: black;">New york</p>
+                <p>Summer</p>
+                <p>Dinner</p>
+                <p>Shop</p>
+                <p>Contact</p>
+                <p>usa</p>
+                <p>Travel</p>
+                <p>India</p>
+                <p>Sri lanka</p>
+                <p>Russia</p>
+                <p>China</p>
+                <p>India</p>
+                <p>New york</p>
+                <p>Summer</p>
+                <p>Dinner</p>
+            </div>
+        </footer>
+        <p class="bot">Powered by Shiva Chaithanya</p>
+    </div>
+</body>
+
+</html>
